@@ -1,7 +1,8 @@
 local frame = require'websocket.frame'
 local handshake = require'websocket.handshake'
 local tools = require'websocket.tools'
-local ssl = luasec and require'luasec.ssl'
+-- local ssl = luasec and require'luasec.ssl'
+local ssl = require("ssl")
 local tinsert = table.insert
 local tconcat = table.concat
 

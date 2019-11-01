@@ -33,7 +33,6 @@ function init(self)
 	self.ws:on_connected(function(ok, err)
 		if ok then
 			print("Connected")
-			msg.post("#", "acquire_input_focus")
 		else
 			print("Unable to connect", err)
 		end

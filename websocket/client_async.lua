@@ -1,4 +1,4 @@
-local socket = require'socket.socket'
+local socket = require'socket'
 local sync = require'websocket.sync'
 local tools = require'websocket.tools'
 
@@ -8,7 +8,7 @@ local VANILLA_LUA51 = _VERSION == "Lua 5.1" and not jit
 local pcall = VANILLA_LUA51 and coxpcall.pcall or pcall
 local corunning = VANILLA_LUA51 and coxpcall.running or coroutine.running
 
-local emscripten = sys.get_sys_info().system_name == "HTML5"
+local emscripten --= sys.get_sys_info().system_name == "HTML5"
 
 if emscripten then
 	-- avoid mixed content warning if trying to access wss resource from http page

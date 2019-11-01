@@ -1,1 +1,1 @@
-return _G.bit
+return _G.bit or require'bit'
